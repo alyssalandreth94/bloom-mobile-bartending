@@ -32,7 +32,7 @@ const cocktails = [
   {
     name: "Champagne Cocktail",
     description: "Champagne, cognac, sugar, bitters",
-    image: "https://images.unsplash.com/photo-1549918864-48ac978761a4?w=600&h=800&fit=crop",
+    image: "https://images.unsplash.com/photo-1592483648228-b35146a4330c?w=600&h=800&fit=crop",
   },
 ];
 
