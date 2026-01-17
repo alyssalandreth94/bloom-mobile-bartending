@@ -95,10 +95,10 @@ export default function Navbar() {
             {/* CTA Button */}
             <a
               href="#quote"
-              className="relative px-6 py-2.5 bg-blush text-white text-sm font-medium tracking-wide rounded-full overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-blush/30"
+              className="relative px-6 py-2.5 bg-gradient-to-r from-rose-400 to-rose-500 text-white text-sm font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-rose-300/50 hover:shadow-xl hover:shadow-rose-400/40 hover:scale-105"
             >
               <span className="relative z-10">Get a Quote</span>
-              <div className="absolute inset-0 bg-blush-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-rose-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           </div>
 

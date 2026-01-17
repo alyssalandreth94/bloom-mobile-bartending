@@ -30,7 +30,7 @@ export default function StickyMobileCTA() {
           {/* Phone Button */}
           <a
             href="tel:+15551234567"
-            className="flex items-center justify-center w-14 h-14 rounded-2xl bg-sage-light text-sage-dark transition-all duration-300 hover:bg-sage hover:text-white"
+            className="flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500 text-white transition-all duration-300 shadow-md shadow-emerald-300/50 hover:bg-emerald-600 hover:shadow-lg active:scale-95"
             aria-label="Call us"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function StickyMobileCTA() {
           {/* Quote Button */}
           <a
             href="#quote"
-            className="flex-1 flex items-center justify-center gap-2 h-14 bg-gradient-to-r from-blush to-blush-dark text-white font-medium rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blush/30 active:scale-[0.98]"
+            className="flex-1 flex items-center justify-center gap-2 h-14 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg shadow-rose-300/50 hover:shadow-xl hover:from-rose-500 hover:to-rose-600 active:scale-[0.98]"
           >
             <span>Get Your Free Quote</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

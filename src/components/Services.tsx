@@ -136,7 +136,7 @@ export default function Services() {
         <div className="text-center mt-16">
           <a
             href="#quote"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-white font-medium rounded-full transition-all duration-300 hover:bg-charcoal-light hover:shadow-lg hover:shadow-charcoal/20"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-gray-400/30 hover:shadow-xl hover:shadow-gray-500/40 hover:scale-105 hover:from-gray-900 hover:to-black"
           >
             <span>Discuss Your Event</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

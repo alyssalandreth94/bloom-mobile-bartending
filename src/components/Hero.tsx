@@ -164,7 +164,7 @@ export default function Hero() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-cream/50 border border-blush/20 rounded-xl text-charcoal placeholder-neutral-gray/60 transition-all duration-300 hover:border-blush/40 focus:border-blush focus:bg-white"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
                         placeholder="Jane Smith"
                       />
                     </div>
@@ -180,7 +180,7 @@ export default function Hero() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 bg-cream/50 border border-blush/20 rounded-xl text-charcoal placeholder-neutral-gray/60 transition-all duration-300 hover:border-blush/40 focus:border-blush focus:bg-white"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
                           placeholder="jane@email.com"
                         />
                       </div>
@@ -194,7 +194,7 @@ export default function Hero() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 bg-cream/50 border border-blush/20 rounded-xl text-charcoal placeholder-neutral-gray/60 transition-all duration-300 hover:border-blush/40 focus:border-blush focus:bg-white"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
                           placeholder="(555) 000-0000"
                         />
                       </div>
@@ -225,7 +225,7 @@ export default function Hero() {
                           min="1"
                           value={formData.guestCount}
                           onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                          className="w-full px-4 py-3 bg-cream/50 border border-blush/20 rounded-xl text-charcoal placeholder-neutral-gray/60 transition-all duration-300 hover:border-blush/40 focus:border-blush focus:bg-white"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
                           placeholder="50"
                         />
                       </div>
@@ -240,7 +240,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-blush to-blush-dark text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blush/30 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
+                      className="w-full py-4 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-rose-300/50 hover:shadow-xl hover:shadow-rose-400/50 hover:from-rose-500 hover:to-rose-600 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">
