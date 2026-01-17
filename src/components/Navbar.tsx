@@ -1,0 +1,156 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
+export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <a href="#" className="flex items-center gap-2 group">
+            <div className="relative">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                className="transition-transform duration-300 group-hover:scale-110"
+              >
+                {/* Flower bloom icon */}
+                <circle cx="20" cy="20" r="8" fill="#E8B4B8" />
+                <ellipse cx="20" cy="10" rx="4" ry="6" fill="#D4E2D4" className="origin-center" />
+                <ellipse cx="20" cy="30" rx="4" ry="6" fill="#D4E2D4" />
+                <ellipse cx="10" cy="20" rx="6" ry="4" fill="#D4E2D4" />
+                <ellipse cx="30" cy="20" rx="6" ry="4" fill="#D4E2D4" />
+                <ellipse cx="12" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 12 12)" />
+                <ellipse cx="28" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 28 12)" />
+                <ellipse cx="12" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 12 28)" />
+                <ellipse cx="28" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 28 28)" />
+                <circle cx="20" cy="20" r="4" fill="#F8E8E8" />
+              </svg>
+            </div>
+            <span
+              className="text-2xl tracking-wider text-charcoal"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
+              BLOOM
+            </span>
+          </a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a
+              href="#services"
+              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+            >
+              Services
+            </a>
+            <a
+              href="#gallery"
+              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+            >
+              Gallery
+            </a>
+            <a
+              href="#testimonials"
+              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+            >
+              Reviews
+            </a>
+
+            {/* Phone - Click to Call */}
+            <a
+              href="tel:+15551234567"
+              className="flex items-center gap-2 text-charcoal hover:text-blush-dark transition-colors duration-300"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <span className="text-sm font-medium">(555) 123-4567</span>
+            </a>
+
+            {/* CTA Button */}
+            <a
+              href="#quote"
+              className="relative px-6 py-2.5 bg-blush text-white text-sm font-medium tracking-wide rounded-full overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-blush/30"
+            >
+              <span className="relative z-10">Get a Quote</span>
+              <div className="absolute inset-0 bg-blush-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-charcoal"
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen ? "max-h-64 pb-6" : "max-h-0"
+          }`}
+        >
+          <div className="flex flex-col gap-4 pt-4 border-t border-blush/20">
+            <a href="#services" className="text-charcoal-light hover:text-blush-dark transition-colors">
+              Services
+            </a>
+            <a href="#gallery" className="text-charcoal-light hover:text-blush-dark transition-colors">
+              Gallery
+            </a>
+            <a href="#testimonials" className="text-charcoal-light hover:text-blush-dark transition-colors">
+              Reviews
+            </a>
+            <a
+              href="tel:+15551234567"
+              className="flex items-center gap-2 text-charcoal font-medium"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              (555) 123-4567
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
