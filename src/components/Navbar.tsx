@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,55 +24,43 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                className="transition-transform duration-300 group-hover:scale-110"
-              >
-                {/* Flower bloom icon */}
-                <circle cx="20" cy="20" r="8" fill="#E8B4B8" />
-                <ellipse cx="20" cy="10" rx="4" ry="6" fill="#D4E2D4" className="origin-center" />
-                <ellipse cx="20" cy="30" rx="4" ry="6" fill="#D4E2D4" />
-                <ellipse cx="10" cy="20" rx="6" ry="4" fill="#D4E2D4" />
-                <ellipse cx="30" cy="20" rx="6" ry="4" fill="#D4E2D4" />
-                <ellipse cx="12" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 12 12)" />
-                <ellipse cx="28" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 28 12)" />
-                <ellipse cx="12" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 12 28)" />
-                <ellipse cx="28" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 28 28)" />
-                <circle cx="20" cy="20" r="4" fill="#F8E8E8" />
-              </svg>
-            </div>
-            <span
-              className="text-2xl tracking-wider text-charcoal"
+        <div className="flex items-center justify-between h-40">
+          {/* Logo Image + Brand Name */}
+          <a href="#" className="flex items-center gap-4 group">
+            <Image
+              src="/bloom-icon.png"
+              alt="Bloom Mobile Bartending"
+              width={360}
+              height={180}
+              className="h-36 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
+            <h1
+              className="text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-wide whitespace-nowrap"
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
-              BLOOM
-            </span>
+              Bloom{" "}
+              <span className="text-blush-dark">Mobile Bartending</span>
+            </h1>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#services"
-              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+              className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide"
             >
               Services
             </a>
             <a
               href="#gallery"
-              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+              className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide"
             >
               Gallery
             </a>
             <a
               href="#testimonials"
-              className="text-charcoal-light hover:text-blush-dark transition-colors duration-300 text-sm tracking-wide"
+              className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide"
             >
               Reviews
             </a>
@@ -79,7 +68,7 @@ export default function Navbar() {
             {/* Phone - Click to Call */}
             <a
               href="tel:+15551234567"
-              className="flex items-center gap-2 text-charcoal hover:text-blush-dark transition-colors duration-300"
+              className="flex items-center gap-2 text-charcoal hover:text-peach transition-colors duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -95,10 +84,10 @@ export default function Navbar() {
             {/* CTA Button */}
             <a
               href="#quote"
-              className="relative px-6 py-2.5 bg-gradient-to-r from-rose-400 to-rose-500 text-white text-sm font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-rose-300/50 hover:shadow-xl hover:shadow-rose-400/40 hover:scale-105"
+              className="relative px-6 py-2.5 bg-gradient-to-r from-green-800 to-green-900 text-white text-sm font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-green-800/50 hover:shadow-xl hover:shadow-green-900/40 hover:scale-105"
             >
               <span className="relative z-10">Get a Quote</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-rose-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-green-950 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           </div>
 
@@ -125,13 +114,13 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-blush/20">
-            <a href="#services" className="text-charcoal-light hover:text-blush-dark transition-colors">
+            <a href="#services" className="text-charcoal-light hover:text-peach transition-colors">
               Services
             </a>
-            <a href="#gallery" className="text-charcoal-light hover:text-blush-dark transition-colors">
+            <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors">
               Gallery
             </a>
-            <a href="#testimonials" className="text-charcoal-light hover:text-blush-dark transition-colors">
+            <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors">
               Reviews
             </a>
             <a

@@ -46,7 +46,7 @@ export default function StickyMobileCTA() {
           {/* Quote Button */}
           <a
             href="#quote"
-            className="flex-1 flex items-center justify-center gap-2 h-14 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg shadow-rose-300/50 hover:shadow-xl hover:from-rose-500 hover:to-rose-600 active:scale-[0.98]"
+            className="flex-1 flex items-center justify-center gap-2 h-14 bg-gradient-to-r from-green-800 to-green-900 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg shadow-green-800/50 hover:shadow-xl hover:from-green-900 hover:to-green-950 active:scale-[0.98]"
           >
             <span>Get Your Free Quote</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

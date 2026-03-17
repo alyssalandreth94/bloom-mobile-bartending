@@ -1,3 +1,5 @@
+import { ScatteredPetals, FloralVine } from "./FloralElements";
+
 export default function Services() {
   const services = [
     {
@@ -61,6 +63,9 @@ export default function Services() {
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blush/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-sage/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      <ScatteredPetals />
+      <FloralVine side="left" className="top-20 opacity-60" />
+      <FloralVine side="right" className="bottom-20 opacity-60" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

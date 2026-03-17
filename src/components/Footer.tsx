@@ -1,41 +1,49 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white relative overflow-hidden">
-      {/* Decorative top border */}
-      <div className="h-1 bg-gradient-to-r from-blush via-champagne to-sage" />
+      {/* Decorative floral top border */}
+      <div className="relative">
+        <div className="h-1 bg-gradient-to-r from-blush via-champagne to-sage" />
+        <svg className="w-full h-8 -mb-1" viewBox="0 0 1200 30" fill="none" preserveAspectRatio="none">
+          <path d="M0,0 C200,30 400,5 600,15 S1000,25 1200,0" stroke="#E8B4B8" strokeWidth="1" opacity="0.2" />
+          <path d="M0,5 C300,25 500,0 700,12 S1000,20 1200,5" stroke="#D4E2D4" strokeWidth="1" opacity="0.15" />
+          <circle cx="300" cy="12" r="3" fill="#E8B4B8" opacity="0.15" />
+          <circle cx="600" cy="10" r="4" fill="#F5E6C8" opacity="0.12" />
+          <circle cx="900" cy="15" r="3" fill="#D4E2D4" opacity="0.15" />
+        </svg>
+      </div>
 
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blush/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+      {/* Subtle floral watermark */}
+      <svg className="absolute bottom-10 left-10 w-64 h-64 opacity-[0.03]" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="30" fill="#E8B4B8" />
+        <ellipse cx="100" cy="60" rx="15" ry="25" fill="#D4E2D4" />
+        <ellipse cx="100" cy="140" rx="15" ry="25" fill="#D4E2D4" />
+        <ellipse cx="60" cy="100" rx="25" ry="15" fill="#D4E2D4" />
+        <ellipse cx="140" cy="100" rx="25" ry="15" fill="#D4E2D4" />
+        <ellipse cx="72" cy="72" rx="15" ry="20" fill="#F5E6C8" transform="rotate(-45 72 72)" />
+        <ellipse cx="128" cy="72" rx="15" ry="20" fill="#F5E6C8" transform="rotate(45 128 72)" />
+        <ellipse cx="72" cy="128" rx="15" ry="20" fill="#F5E6C8" transform="rotate(45 72 128)" />
+        <ellipse cx="128" cy="128" rx="15" ry="20" fill="#F5E6C8" transform="rotate(-45 128 128)" />
+        <circle cx="100" cy="100" r="15" fill="#F8E8E8" />
+      </svg>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-6 group">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                className="transition-transform duration-300 group-hover:scale-110"
-              >
-                <circle cx="20" cy="20" r="8" fill="#E8B4B8" />
-                <ellipse cx="20" cy="10" rx="4" ry="6" fill="#D4E2D4" />
-                <ellipse cx="20" cy="30" rx="4" ry="6" fill="#D4E2D4" />
-                <ellipse cx="10" cy="20" rx="6" ry="4" fill="#D4E2D4" />
-                <ellipse cx="30" cy="20" rx="6" ry="4" fill="#D4E2D4" />
-                <ellipse cx="12" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 12 12)" />
-                <ellipse cx="28" cy="12" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 28 12)" />
-                <ellipse cx="12" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(45 12 28)" />
-                <ellipse cx="28" cy="28" rx="4" ry="5" fill="#F5E6C8" transform="rotate(-45 28 28)" />
-                <circle cx="20" cy="20" r="4" fill="#F8E8E8" />
-              </svg>
-              <span
-                className="text-2xl tracking-wider"
-                style={{ fontFamily: "var(--font-playfair), serif" }}
-              >
-                BLOOM
-              </span>
+            <a href="#" className="flex items-center mb-6 group">
+              <Image
+                src="/bloom-icon.png"
+                alt="Bloom Mobile Bartending"
+                width={360}
+                height={180}
+                className="h-36 w-auto brightness-0 invert opacity-90 transition-transform duration-300 group-hover:scale-105"
+              />
             </a>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
               Premium mobile bartending services for life's most memorable moments.
@@ -46,7 +54,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blush transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-peach transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -55,7 +63,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blush transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-peach transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +72,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blush transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-peach transition-colors duration-300"
                 aria-label="Pinterest"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -79,22 +87,22 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#services" className="text-white/70 hover:text-blush transition-colors duration-300">
+                <a href="#services" className="text-white/70 hover:text-peach transition-colors duration-300">
                   Our Services
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-white/70 hover:text-blush transition-colors duration-300">
+                <a href="#gallery" className="text-white/70 hover:text-peach transition-colors duration-300">
                   Cocktail Gallery
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-white/70 hover:text-blush transition-colors duration-300">
+                <a href="#testimonials" className="text-white/70 hover:text-peach transition-colors duration-300">
                   Client Reviews
                 </a>
               </li>
               <li>
-                <a href="#quote" className="text-white/70 hover:text-blush transition-colors duration-300">
+                <a href="#quote" className="text-white/70 hover:text-peach transition-colors duration-300">
                   Get a Quote
                 </a>
               </li>
@@ -108,9 +116,9 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+15551234567"
-                  className="flex items-center gap-3 text-white/70 hover:text-blush transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-white/70 hover:text-peach transition-colors duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blush/20 transition-colors duration-300">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-peach/20 transition-colors duration-300">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -126,9 +134,9 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@bloombartending.com"
-                  className="flex items-center gap-3 text-white/70 hover:text-blush transition-colors duration-300 group"
+                  className="flex items-center gap-3 text-white/70 hover:text-peach transition-colors duration-300 group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blush/20 transition-colors duration-300">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-peach/20 transition-colors duration-300">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -173,10 +181,10 @@ export default function Footer() {
             © {new Date().getFullYear()} BLOOM Mobile Bartending. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-white/50">
-            <a href="#" className="hover:text-blush transition-colors duration-300">
+            <a href="#" className="hover:text-peach transition-colors duration-300">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-blush transition-colors duration-300">
+            <a href="#" className="hover:text-peach transition-colors duration-300">
               Terms of Service
             </a>
           </div>

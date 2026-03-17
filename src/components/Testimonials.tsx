@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FloralCorner, ScatteredPetals } from "./FloralElements";
 
 const testimonials = [
   {
@@ -53,11 +54,16 @@ export default function Testimonials() {
       {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-sage/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-champagne/10 rounded-full blur-3xl" />
+      <ScatteredPetals />
 
       {/* Large quote decoration */}
       <div className="absolute top-20 left-10 text-[200px] text-blush/5 font-serif leading-none select-none">
         "
       </div>
+
+      {/* Floral corner accents */}
+      <FloralCorner position="top-left" className="absolute top-4 left-4 opacity-30" />
+      <FloralCorner position="bottom-right" className="absolute bottom-4 right-4 opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -128,7 +134,7 @@ export default function Testimonials() {
               className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 ${
                 index === activeIndex
                   ? "bg-gradient-to-br from-blush to-blush-dark text-white scale-110 shadow-lg shadow-blush/30"
-                  : "bg-white/80 text-charcoal-light hover:bg-blush-light hover:text-charcoal"
+                  : "bg-white/80 text-charcoal-light hover:bg-peach/20 hover:text-charcoal"
               }`}
             >
               {testimonial.image}

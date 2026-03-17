@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { FloralVine } from "./FloralElements";
 
 const cocktails = [
   {
@@ -66,6 +67,8 @@ export default function CocktailGallery() {
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-champagne/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-blush/10 rounded-full blur-3xl" />
       </div>
+      <FloralVine side="left" className="top-10 opacity-50" />
+      <FloralVine side="right" className="top-40 opacity-50" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -138,8 +141,8 @@ export default function CocktailGallery() {
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 ${
                 index === currentIndex
-                  ? "w-8 h-2 bg-rose-400 rounded-full"
-                  : "w-2 h-2 bg-gray-300 rounded-full hover:bg-rose-300"
+                  ? "w-8 h-2 bg-violet-400 rounded-full"
+                  : "w-2 h-2 bg-gray-300 rounded-full hover:bg-violet-300"
               }`}
               aria-label={`Go to cocktail ${index + 1}`}
             />
@@ -154,7 +157,7 @@ export default function CocktailGallery() {
               onClick={() => goToSlide(index)}
               className={`flex-shrink-0 w-16 h-16 rounded-2xl overflow-hidden transition-all duration-300 ${
                 index === currentIndex
-                  ? "ring-2 ring-rose-400 ring-offset-2 scale-110"
+                  ? "ring-2 ring-violet-400 ring-offset-2 scale-110"
                   : "opacity-60 hover:opacity-100"
               }`}
             >

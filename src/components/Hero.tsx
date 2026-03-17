@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { ScatteredPetals, FloralCorner } from "./FloralElements";
 
 interface FormData {
   name: string;
@@ -45,9 +46,39 @@ export default function Hero() {
   };
 
   return (
-    <section id="quote" className="relative min-h-screen pt-20 overflow-hidden">
+    <section id="quote" className="relative min-h-screen pt-40 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush-light/30 to-champagne-light/50" />
+      <ScatteredPetals />
+      <FloralCorner position="top-left" className="absolute top-16 left-4 opacity-40" />
+      <FloralCorner position="top-right" className="absolute top-16 right-4 opacity-40" />
+      <FloralCorner position="bottom-left" className="absolute bottom-12 left-4 opacity-30" />
+      <FloralCorner position="bottom-right" className="absolute bottom-12 right-4 opacity-30" />
+
+      {/* Animated floating petals */}
+      {[
+        { left: "10%", delay: "0s", duration: "14s", size: "10px", color: "#E8B4B8" },
+        { left: "25%", delay: "3s", duration: "11s", size: "8px", color: "#D4E2D4" },
+        { left: "45%", delay: "6s", duration: "16s", size: "12px", color: "#F5E6C8" },
+        { left: "65%", delay: "2s", duration: "13s", size: "9px", color: "#E8B4B8" },
+        { left: "80%", delay: "5s", duration: "15s", size: "11px", color: "#D4E2D4" },
+        { left: "92%", delay: "8s", duration: "12s", size: "7px", color: "#F5E6C8" },
+      ].map((petal, i) => (
+        <div
+          key={i}
+          className="absolute pointer-events-none floating-petal"
+          style={{
+            left: petal.left,
+            top: "-20px",
+            animationDelay: petal.delay,
+            animationDuration: `${petal.duration}, 4s`,
+          }}
+        >
+          <svg width={petal.size} height={petal.size} viewBox="0 0 12 16">
+            <ellipse cx="6" cy="8" rx="5" ry="7" fill={petal.color} opacity="0.5" />
+          </svg>
+        </div>
+      ))}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -151,7 +182,7 @@ export default function Hero() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                         placeholder="Jane Smith"
                       />
                     </div>
@@ -167,7 +198,7 @@ export default function Hero() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                           placeholder="jane@email.com"
                         />
                       </div>
@@ -181,7 +212,7 @@ export default function Hero() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                           placeholder="(555) 000-0000"
                         />
                       </div>
@@ -212,7 +243,7 @@ export default function Hero() {
                           min="1"
                           value={formData.guestCount}
                           onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-rose-300 focus:border-rose-400 focus:ring-2 focus:ring-rose-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
                           placeholder="50"
                         />
                       </div>
@@ -227,7 +258,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-rose-400 to-rose-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-rose-300/50 hover:shadow-xl hover:shadow-rose-400/50 hover:from-rose-500 hover:to-rose-600 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
+                      className="w-full py-4 bg-gradient-to-r from-green-800 to-green-900 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-green-800/50 hover:shadow-xl hover:shadow-green-900/50 hover:from-green-900 hover:to-green-950 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">
