@@ -16,11 +16,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "BLOOM Mobile Bartending | Elevate Your Event",
-  description: "Premium mobile bartending services for weddings, corporate events, and private celebrations. Licensed, insured, and committed to crafting unforgettable experiences.",
-  keywords: "mobile bartending, wedding bartender, corporate events, cocktail catering, private party bar",
+  title: "BLOOM Mobile Bartending | San Antonio, Texas",
+  description: "Premium mobile bartending services in San Antonio, Texas for weddings, corporate events, and private celebrations. Licensed, insured, and committed to crafting unforgettable experiences.",
+  keywords: "mobile bartending, wedding bartender, corporate events, cocktail catering, private party bar, San Antonio, Texas",
   openGraph: {
-    title: "BLOOM Mobile Bartending | Elevate Your Event",
+    title: "BLOOM Mobile Bartending | San Antonio, Texas",
     description: "Premium mobile bartending services for weddings, corporate events, and private celebrations.",
     type: "website",
   },
