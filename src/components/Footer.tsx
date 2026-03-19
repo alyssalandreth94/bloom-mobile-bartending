@@ -167,8 +167,8 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span>
-                  Serving the Greater Metro Area<br />
-                  <span className="text-sm">& surrounding regions</span>
+                  Serving the Greater San Antonio<br />
+                  <span className="text-sm">Metropolitan Area & surrounding regions</span>
                 </span>
               </li>
             </ul>
