@@ -6,34 +6,39 @@ import { FloralVine } from "./FloralElements";
 
 const cocktails = [
   {
-    name: "Rose Garden Spritz",
-    description: "Prosecco, rose syrup, elderflower",
-    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600&h=800&fit=crop",
+    name: "Secret Rosé Garden",
+    description: "Sparkling rosé, vodka, Lillet Rosé, muddled strawberry, mint, soda water",
+    image: "/secret-rose-garden.png",
   },
   {
     name: "Sage Smash",
-    description: "Gin, muddled sage, lime, honey",
+    description: "Bourbon, muddled blackberry, sage, lime, honey",
     image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600&h=800&fit=crop",
   },
   {
     name: "Golden Hour",
-    description: "Bourbon, champagne, apricot",
+    description: "Rye whiskey, sweet vermouth, apricot, orange bitters",
+    image: "/golden-hour.png",
+  },
+  {
+    name: "Lavender Haze",
+    description: "Empress gin, creme de violette, rose syrup, lemon, champagne",
+    image: "/lavender-haze.png",
+  },
+  {
+    name: "Lilikoi Mai Tai",
+    description: "Light rum, dark rum float, orange liqueur, passion fruit, lime, orgeat",
+    image: "/mai-tai.png",
+  },
+  {
+    name: "White Linen",
+    description: "Gin, elderflower, cucumber, lemon, soda",
+    image: "/white-linen.png",
+  },
+  {
+    name: "Classic Old Fashioned",
+    description: "Bourbon, simple syrup, bitters",
     image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&h=800&fit=crop",
-  },
-  {
-    name: "Lavender Dream",
-    description: "Vodka, lavender, lemon, butterfly pea",
-    image: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=600&h=800&fit=crop",
-  },
-  {
-    name: "Cucumber Cooler",
-    description: "Gin, cucumber, mint, elderflower",
-    image: "https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=600&h=800&fit=crop",
-  },
-  {
-    name: "Champagne Cocktail",
-    description: "Champagne, cognac, sugar, bitters",
-    image: "https://images.unsplash.com/photo-1592483648228-b35146a4330c?w=600&h=800&fit=crop",
   },
 ];
 

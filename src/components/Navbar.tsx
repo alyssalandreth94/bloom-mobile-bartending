@@ -39,7 +39,7 @@ export default function Navbar() {
               className="text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-wide whitespace-nowrap"
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
-              Bloom{" "}
+              BLOOM{" "}
               <span className="text-blush-dark">Mobile Bartending</span>
             </h1>
           </a>
@@ -84,10 +84,10 @@ export default function Navbar() {
             {/* CTA Button */}
             <a
               href="#quote"
-              className="relative px-6 py-2.5 bg-gradient-to-r from-green-800 to-green-900 text-white text-sm font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-green-800/50 hover:shadow-xl hover:shadow-green-900/40 hover:scale-105"
+              className="relative px-6 py-2.5 bg-[#819B8A] text-white text-sm font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-[#819B8A]/50 hover:shadow-xl hover:shadow-[#6E8876]/40 hover:bg-[#6E8876] hover:scale-105"
             >
               <span className="relative z-10">Get a Quote</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-green-950 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <div className="absolute inset-0 bg-[#6E8876] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           </div>
 

@@ -116,7 +116,7 @@ export default function Hero() {
 
             <p className="text-lg sm:text-xl text-charcoal-light leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
               From intimate gatherings to grand celebrations, BLOOM brings the bar to you.
-              Expert mixologists, premium spirits, and bespoke cocktails tailored to your vision.
+              Expert mixologists craft bespoke cocktails tailored to your vision and offer customizable packages combined with a stress-free consultation and planning experience.
             </p>
 
             {/* Urgency Line */}
@@ -132,11 +132,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-blush/20">
-              <div>
-                <div className="text-3xl font-bold text-charcoal" style={{ fontFamily: "var(--font-playfair), serif" }}>500+</div>
-                <div className="text-sm text-neutral-gray">Events Served</div>
-              </div>
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-blush/20 max-w-xs">
               <div>
                 <div className="text-3xl font-bold text-charcoal" style={{ fontFamily: "var(--font-playfair), serif" }}>5.0</div>
                 <div className="text-sm text-neutral-gray">Star Rating</div>
@@ -258,7 +254,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-green-800 to-green-900 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-green-800/50 hover:shadow-xl hover:shadow-green-900/50 hover:from-green-900 hover:to-green-950 hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
+                      className="w-full py-4 bg-[#819B8A] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-[#819B8A]/50 hover:shadow-xl hover:shadow-[#6E8876]/50 hover:bg-[#6E8876] hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">
