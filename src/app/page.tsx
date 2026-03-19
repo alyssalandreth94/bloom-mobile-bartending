@@ -12,10 +12,10 @@ function FloralPageBreak() {
   return (
     <div className="w-full overflow-hidden">
       <Image
-        src="/wildflower-border.png"
+        src="/wildflower-divider.png"
         alt="Floral divider"
-        width={2222}
-        height={702}
+        width={5468}
+        height={2743}
         className="w-full h-auto"
       />
     </div>

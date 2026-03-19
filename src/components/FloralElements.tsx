@@ -12,10 +12,10 @@ export function FloralDivider({ className = "" }: { className?: string }) {
         {/* Center flower */}
         <g transform="translate(600, 60)">
           {/* Petals */}
-          <ellipse cx="0" cy="-14" rx="6" ry="12" fill="#C8A2E0" opacity="0.6" />
-          <ellipse cx="0" cy="14" rx="6" ry="12" fill="#C8A2E0" opacity="0.6" />
-          <ellipse cx="-14" cy="0" rx="12" ry="6" fill="#C8A2E0" opacity="0.6" />
-          <ellipse cx="14" cy="0" rx="12" ry="6" fill="#C8A2E0" opacity="0.6" />
+          <ellipse cx="0" cy="-14" rx="6" ry="12" fill="#8E9FCA" opacity="0.6" />
+          <ellipse cx="0" cy="14" rx="6" ry="12" fill="#8E9FCA" opacity="0.6" />
+          <ellipse cx="-14" cy="0" rx="12" ry="6" fill="#8E9FCA" opacity="0.6" />
+          <ellipse cx="14" cy="0" rx="12" ry="6" fill="#8E9FCA" opacity="0.6" />
           <ellipse cx="-10" cy="-10" rx="6" ry="10" fill="#D4E2D4" opacity="0.5" transform="rotate(-45 -10 -10)" />
           <ellipse cx="10" cy="-10" rx="6" ry="10" fill="#D4E2D4" opacity="0.5" transform="rotate(45 10 -10)" />
           <ellipse cx="-10" cy="10" rx="6" ry="10" fill="#D4E2D4" opacity="0.5" transform="rotate(45 -10 10)" />
@@ -36,9 +36,9 @@ export function FloralDivider({ className = "" }: { className?: string }) {
         <ellipse cx="350" cy="55" rx="8" ry="4" fill="#D4E2D4" opacity="0.3" transform="rotate(-15 350 55)" />
         <ellipse cx="450" cy="52" rx="7" ry="3.5" fill="#D4E2D4" opacity="0.25" transform="rotate(25 450 52)" />
         {/* Left small flowers */}
-        <circle cx="200" cy="42" r="3" fill="#C8A2E0" opacity="0.3" />
+        <circle cx="200" cy="42" r="3" fill="#8E9FCA" opacity="0.3" />
         <circle cx="400" cy="58" r="2.5" fill="#F5E6C8" opacity="0.35" />
-        <circle cx="500" cy="53" r="2" fill="#C8A2E0" opacity="0.25" />
+        <circle cx="500" cy="53" r="2" fill="#8E9FCA" opacity="0.25" />
 
         {/* Right vine */}
         <path
@@ -53,9 +53,9 @@ export function FloralDivider({ className = "" }: { className?: string }) {
         <ellipse cx="850" cy="55" rx="8" ry="4" fill="#D4E2D4" opacity="0.3" transform="rotate(15 850 55)" />
         <ellipse cx="750" cy="52" rx="7" ry="3.5" fill="#D4E2D4" opacity="0.25" transform="rotate(-25 750 52)" />
         {/* Right small flowers */}
-        <circle cx="1000" cy="42" r="3" fill="#C8A2E0" opacity="0.3" />
+        <circle cx="1000" cy="42" r="3" fill="#8E9FCA" opacity="0.3" />
         <circle cx="800" cy="58" r="2.5" fill="#F5E6C8" opacity="0.35" />
-        <circle cx="700" cy="53" r="2" fill="#C8A2E0" opacity="0.25" />
+        <circle cx="700" cy="53" r="2" fill="#8E9FCA" opacity="0.25" />
       </svg>
     </div>
   );
@@ -95,16 +95,16 @@ export function FloralCorner({ position = "top-left", className = "" }: { positi
       <ellipse cx="40" cy="40" rx="7" ry="3.5" fill="#D4E2D4" opacity="0.25" transform="rotate(-30 40 40)" />
       {/* Small flowers */}
       <g transform="translate(20, 8)">
-        <circle cx="0" cy="0" r="4" fill="#C8A2E0" opacity="0.4" />
+        <circle cx="0" cy="0" r="4" fill="#8E9FCA" opacity="0.4" />
         <circle cx="0" cy="0" r="2" fill="#F5E6C8" opacity="0.5" />
       </g>
       <g transform="translate(8, 20)">
         <circle cx="0" cy="0" r="3" fill="#F5E6C8" opacity="0.35" />
-        <circle cx="0" cy="0" r="1.5" fill="#C8A2E0" opacity="0.4" />
+        <circle cx="0" cy="0" r="1.5" fill="#8E9FCA" opacity="0.4" />
       </g>
       <g transform="translate(45, 50)">
-        <ellipse cx="-4" cy="0" rx="3" ry="5" fill="#C8A2E0" opacity="0.25" transform="rotate(-20 -4 0)" />
-        <ellipse cx="4" cy="0" rx="3" ry="5" fill="#C8A2E0" opacity="0.25" transform="rotate(20 4 0)" />
+        <ellipse cx="-4" cy="0" rx="3" ry="5" fill="#8E9FCA" opacity="0.25" transform="rotate(-20 -4 0)" />
+        <ellipse cx="4" cy="0" rx="3" ry="5" fill="#8E9FCA" opacity="0.25" transform="rotate(20 4 0)" />
         <circle cx="0" cy="0" r="2.5" fill="#F5E6C8" opacity="0.35" />
       </g>
     </svg>
@@ -116,22 +116,22 @@ export function ScatteredPetals({ className = "" }: { className?: string }) {
     <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`}>
       <svg className="w-full h-full" viewBox="0 0 1000 800" fill="none" preserveAspectRatio="xMidYMid slice">
         {/* Scattered petals across the section */}
-        <ellipse cx="80" cy="100" rx="8" ry="14" fill="#C8A2E0" opacity="0.08" transform="rotate(-30 80 100)" />
-        <ellipse cx="920" cy="150" rx="10" ry="16" fill="#C8A2E0" opacity="0.07" transform="rotate(25 920 150)" />
+        <ellipse cx="80" cy="100" rx="8" ry="14" fill="#8E9FCA" opacity="0.08" transform="rotate(-30 80 100)" />
+        <ellipse cx="920" cy="150" rx="10" ry="16" fill="#8E9FCA" opacity="0.07" transform="rotate(25 920 150)" />
         <ellipse cx="150" cy="600" rx="9" ry="15" fill="#D4E2D4" opacity="0.08" transform="rotate(40 150 600)" />
         <ellipse cx="850" cy="650" rx="8" ry="13" fill="#D4E2D4" opacity="0.07" transform="rotate(-35 850 650)" />
         <ellipse cx="500" cy="80" rx="7" ry="12" fill="#F5E6C8" opacity="0.1" transform="rotate(15 500 80)" />
-        <ellipse cx="300" cy="400" rx="9" ry="14" fill="#C8A2E0" opacity="0.06" transform="rotate(-45 300 400)" />
+        <ellipse cx="300" cy="400" rx="9" ry="14" fill="#8E9FCA" opacity="0.06" transform="rotate(-45 300 400)" />
         <ellipse cx="700" cy="350" rx="8" ry="13" fill="#F5E6C8" opacity="0.07" transform="rotate(30 700 350)" />
         <ellipse cx="50" cy="350" rx="7" ry="11" fill="#D4E2D4" opacity="0.06" transform="rotate(55 50 350)" />
-        <ellipse cx="950" cy="450" rx="8" ry="12" fill="#C8A2E0" opacity="0.07" transform="rotate(-20 950 450)" />
+        <ellipse cx="950" cy="450" rx="8" ry="12" fill="#8E9FCA" opacity="0.07" transform="rotate(-20 950 450)" />
         <ellipse cx="600" cy="700" rx="10" ry="15" fill="#D4E2D4" opacity="0.06" transform="rotate(35 600 700)" />
 
         {/* Small flower clusters */}
         <g transform="translate(120, 250)" opacity="0.12">
-          <ellipse cx="-5" cy="0" rx="4" ry="7" fill="#C8A2E0" transform="rotate(-30 -5 0)" />
-          <ellipse cx="5" cy="0" rx="4" ry="7" fill="#C8A2E0" transform="rotate(30 5 0)" />
-          <ellipse cx="0" cy="-5" rx="4" ry="7" fill="#C8A2E0" transform="rotate(0 0 -5)" />
+          <ellipse cx="-5" cy="0" rx="4" ry="7" fill="#8E9FCA" transform="rotate(-30 -5 0)" />
+          <ellipse cx="5" cy="0" rx="4" ry="7" fill="#8E9FCA" transform="rotate(30 5 0)" />
+          <ellipse cx="0" cy="-5" rx="4" ry="7" fill="#8E9FCA" transform="rotate(0 0 -5)" />
           <circle cx="0" cy="0" r="3" fill="#F5E6C8" />
         </g>
         <g transform="translate(880, 550)" opacity="0.1">
@@ -141,8 +141,8 @@ export function ScatteredPetals({ className = "" }: { className?: string }) {
           <circle cx="0" cy="0" r="3" fill="#F5E6C8" />
         </g>
         <g transform="translate(450, 500)" opacity="0.08">
-          <ellipse cx="-4" cy="0" rx="3" ry="6" fill="#C8A2E0" transform="rotate(-40 -4 0)" />
-          <ellipse cx="4" cy="0" rx="3" ry="6" fill="#C8A2E0" transform="rotate(40 4 0)" />
+          <ellipse cx="-4" cy="0" rx="3" ry="6" fill="#8E9FCA" transform="rotate(-40 -4 0)" />
+          <ellipse cx="4" cy="0" rx="3" ry="6" fill="#8E9FCA" transform="rotate(40 4 0)" />
           <circle cx="0" cy="0" r="2.5" fill="#F5E6C8" />
         </g>
       </svg>
@@ -173,11 +173,11 @@ export function FloralVine({ side = "left", className = "" }: { side?: "left" | 
       <ellipse cx="20" cy="290" rx="12" ry="5" fill="#D4E2D4" opacity="0.15" transform="rotate(-30 20 290)" />
       <ellipse cx="32" cy="350" rx="10" ry="4.5" fill="#D4E2D4" opacity="0.12" transform="rotate(35 32 350)" />
       {/* Flower buds */}
-      <circle cx="22" cy="90" r="4" fill="#C8A2E0" opacity="0.15" />
+      <circle cx="22" cy="90" r="4" fill="#8E9FCA" opacity="0.15" />
       <circle cx="22" cy="90" r="2" fill="#F5E6C8" opacity="0.2" />
-      <circle cx="33" cy="200" r="5" fill="#C8A2E0" opacity="0.12" />
+      <circle cx="33" cy="200" r="5" fill="#8E9FCA" opacity="0.12" />
       <circle cx="33" cy="200" r="2.5" fill="#F5E6C8" opacity="0.18" />
-      <circle cx="22" cy="320" r="4" fill="#C8A2E0" opacity="0.15" />
+      <circle cx="22" cy="320" r="4" fill="#8E9FCA" opacity="0.15" />
       <circle cx="22" cy="320" r="2" fill="#F5E6C8" opacity="0.2" />
     </svg>
   );

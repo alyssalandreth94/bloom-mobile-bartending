@@ -67,7 +67,7 @@ export default function Navbar() {
 
             {/* Phone - Click to Call */}
             <a
-              href="tel:+15551234567"
+              href="tel:+18183849862"
               className="flex items-center gap-2 text-charcoal hover:text-peach transition-colors duration-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ export default function Navbar() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span className="text-sm font-medium">(555) 123-4567</span>
+              <span className="text-sm font-medium">(818) 384-9862</span>
             </a>
 
             {/* CTA Button */}
@@ -124,7 +124,7 @@ export default function Navbar() {
               Reviews
             </a>
             <a
-              href="tel:+15551234567"
+              href="tel:+18183849862"
               className="flex items-center gap-2 text-charcoal font-medium"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ export default function Navbar() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              (555) 123-4567
+              (818) 384-9862
             </a>
           </div>
         </div>

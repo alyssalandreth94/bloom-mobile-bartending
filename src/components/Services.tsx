@@ -33,7 +33,7 @@ export default function Services() {
         />
       ),
       features: ["Branded cocktails", "Non-alcoholic options", "Efficient service"],
-      accent: "sage",
+      accent: "forest",
     },
     {
       title: "Private Parties",
@@ -49,7 +49,7 @@ export default function Services() {
         />
       ),
       features: ["Theme customization", "Interactive experiences", "Flexible packages"],
-      accent: "champagne",
+      accent: "dustypink",
     },
     {
       title: "Special Occasions",
@@ -64,14 +64,17 @@ export default function Services() {
           className="w-24 h-24 object-contain"
         />
       ),
-      features: ["Premium spirits", "Full bar setups", "Event coordination"],
-      accent: "blush",
+      features: ["Expert mixology", "Full bar setups", "Event coordination"],
+      accent: "peach",
     },
   ];
 
   const accentColors: Record<string, { bg: string; border: string; text: string }> = {
     blush: { bg: "bg-blush-light/50", border: "border-blush/30", text: "text-blush-dark" },
     sage: { bg: "bg-sage-light/50", border: "border-sage/30", text: "text-sage-dark" },
+    peach: { bg: "bg-[#F2A573]/15", border: "border-[#F2A573]/30", text: "text-[#D4864F]" },
+    dustypink: { bg: "bg-[#E8C4C4]/30", border: "border-[#D4A0A0]/30", text: "text-[#B07878]" },
+    forest: { bg: "bg-[#819B8A]/15", border: "border-[#819B8A]/30", text: "text-[#6E8876]" },
     champagne: { bg: "bg-champagne-light/50", border: "border-champagne/30", text: "text-champagne-dark" },
   };
 

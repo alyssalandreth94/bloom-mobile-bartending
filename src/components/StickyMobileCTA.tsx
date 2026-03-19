@@ -29,7 +29,7 @@ export default function StickyMobileCTA() {
         <div className="flex items-center gap-3">
           {/* Phone Button */}
           <a
-            href="tel:+15551234567"
+            href="tel:+18183849862"
             className="flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500 text-white transition-all duration-300 shadow-md shadow-emerald-300/50 hover:bg-emerald-600 hover:shadow-lg active:scale-95"
             aria-label="Call us"
           >

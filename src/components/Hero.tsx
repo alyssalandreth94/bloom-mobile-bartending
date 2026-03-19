@@ -178,7 +178,7 @@ export default function Hero() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
                         placeholder="Jane Smith"
                       />
                     </div>
@@ -194,7 +194,7 @@ export default function Hero() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
                           placeholder="jane@email.com"
                         />
                       </div>
@@ -208,7 +208,7 @@ export default function Hero() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
                           placeholder="(555) 000-0000"
                         />
                       </div>
@@ -239,7 +239,7 @@ export default function Hero() {
                           min="1"
                           value={formData.guestCount}
                           onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-violet-300 focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
                           placeholder="50"
                         />
                       </div>
@@ -294,8 +294,8 @@ export default function Hero() {
                   <div className="p-4 bg-champagne-light/50 rounded-xl">
                     <p className="text-sm text-charcoal">
                       Can't wait? Call us directly at{" "}
-                      <a href="tel:+15551234567" className="text-blush-dark font-medium hover:underline">
-                        (555) 123-4567
+                      <a href="tel:+18183849862" className="text-blush-dark font-medium hover:underline">
+                        (818) 384-9862
                       </a>
                     </p>
                   </div>

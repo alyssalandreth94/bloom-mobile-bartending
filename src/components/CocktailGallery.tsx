@@ -40,6 +40,11 @@ const cocktails = [
     description: "Bourbon, simple syrup, bitters",
     image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&h=800&fit=crop",
   },
+  {
+    name: "Tequila Honey Bee",
+    description: "Reposado tequila, mezcal rinse, cardamon-honey syrup, lemon, bitters",
+    image: "/honey-bee.png",
+  },
 ];
 
 export default function CocktailGallery() {
@@ -146,8 +151,8 @@ export default function CocktailGallery() {
               onClick={() => goToSlide(index)}
               className={`transition-all duration-300 ${
                 index === currentIndex
-                  ? "w-8 h-2 bg-violet-400 rounded-full"
-                  : "w-2 h-2 bg-gray-300 rounded-full hover:bg-violet-300"
+                  ? "w-8 h-2 bg-[#6B7EB0] rounded-full"
+                  : "w-2 h-2 bg-gray-300 rounded-full hover:bg-[#8E9FCA]"
               }`}
               aria-label={`Go to cocktail ${index + 1}`}
             />
@@ -162,7 +167,7 @@ export default function CocktailGallery() {
               onClick={() => goToSlide(index)}
               className={`flex-shrink-0 w-16 h-16 rounded-2xl overflow-hidden transition-all duration-300 ${
                 index === currentIndex
-                  ? "ring-2 ring-violet-400 ring-offset-2 scale-110"
+                  ? "ring-2 ring-[#6B7EB0] ring-offset-2 scale-110"
                   : "opacity-60 hover:opacity-100"
               }`}
             >

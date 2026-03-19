@@ -115,7 +115,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+18183849862"
                   className="flex items-center gap-3 text-white/70 hover:text-peach transition-colors duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-peach/20 transition-colors duration-300">
@@ -128,7 +128,7 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <span className="font-medium">(555) 123-4567</span>
+                  <span className="font-medium">(818) 384-9862</span>
                 </a>
               </li>
               <li>
