@@ -10,15 +10,12 @@ import Image from "next/image";
 
 function FloralPageBreak() {
   return (
-    <div className="w-full overflow-hidden">
-      <Image
-        src="/wildflower-divider.png"
-        alt="Floral divider"
-        width={5468}
-        height={2743}
-        className="w-full h-auto"
-      />
-    </div>
+    <div
+      className="w-full h-[200px] bg-fixed bg-center bg-cover"
+      style={{ backgroundImage: "url(/wildflower-divider.png)" }}
+      role="img"
+      aria-label="Floral divider"
+    />
   );
 }
 

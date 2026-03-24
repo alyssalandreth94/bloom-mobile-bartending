@@ -24,8 +24,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top row: Logo + Name + Location/Phone/Quote */}
-        <div className="flex items-center justify-between h-40">
+        {/* Row 1: Logo + Location/Phone/Quote */}
+        <div className="flex items-center justify-between py-2">
           {/* Logo Image + Brand Name */}
           <a href="#" className="flex items-center gap-4 group">
             <Image
@@ -33,7 +33,7 @@ export default function Navbar() {
               alt="Bloom Mobile Bartending"
               width={360}
               height={180}
-              className="h-36 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+              className="h-20 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
               priority
             />
             <h1
@@ -46,32 +46,19 @@ export default function Navbar() {
           </a>
 
           {/* Location, Phone, CTA */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
             {/* Location */}
-            <span className="flex items-center gap-1.5 text-charcoal-light text-base tracking-wide">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              San Antonio, TX
-            </span>
+            <div className="flex flex-col items-center text-charcoal-light">
+              <span className="text-xs font-semibold tracking-wider uppercase">Location</span>
+              <span className="text-sm text-blush-dark font-medium">San Antonio, TX</span>
+            </div>
 
             {/* Phone */}
             <a
               href="tel:+18183849862"
               className="flex items-center gap-2 text-charcoal hover:text-peach transition-colors duration-300"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -108,16 +95,22 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Second row: Services, Gallery, Reviews */}
-        <div className="hidden md:flex items-center justify-end gap-8 -mt-4 pb-2">
-          <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide">
+        {/* Divider */}
+        <div className="hidden md:block border-t border-blush/20" />
+
+        {/* Row 2: Navigation links centered */}
+        <div className="hidden md:flex items-center justify-center gap-12 py-3">
+          <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
             Services
           </a>
-          <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide">
+          <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
             Gallery
           </a>
-          <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm tracking-wide">
+          <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
             Reviews
+          </a>
+          <a href="#quote" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+            Contact
           </a>
         </div>
 
