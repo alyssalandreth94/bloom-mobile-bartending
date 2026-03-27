@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
 interface LeadData {
   name: string;
@@ -8,16 +7,6 @@ interface LeadData {
   eventDate: string;
   guestCount: string;
 }
-
-const transporter = nodemailer.createTransport({
-  host: "mail.bloombartending.com",
-  port: 465,
-  secure: true,
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-});
 
 export async function POST(request: Request) {
   try {
@@ -45,7 +34,7 @@ export async function POST(request: Request) {
 
     // Send to Zapier webhook
     if (process.env.ZAPIER_WEBHOOK_URL) {
-      await fetch(process.env.ZAPIER_WEBHOOK_URL, {
+      const response = await fetch(process.env.ZAPIER_WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -57,25 +46,11 @@ export async function POST(request: Request) {
           submittedAt: new Date().toISOString(),
         }),
       });
-    }
 
-    // Send email notification
-    await transporter.sendMail({
-      from: `"Bloom Bartending Website" <${process.env.EMAIL_USER}>`,
-      to: "alyssa@bloombartending.com",
-      subject: `New Quote Request from ${data.name}`,
-      html: `
-        <h2>New Quote Request</h2>
-        <table style="border-collapse: collapse; width: 100%; max-width: 500px;">
-          <tr><td style="padding: 8px; font-weight: bold;">Name:</td><td style="padding: 8px;">${data.name}</td></tr>
-          <tr><td style="padding: 8px; font-weight: bold;">Email:</td><td style="padding: 8px;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
-          <tr><td style="padding: 8px; font-weight: bold;">Phone:</td><td style="padding: 8px;"><a href="tel:${data.phone}">${data.phone}</a></td></tr>
-          <tr><td style="padding: 8px; font-weight: bold;">Event Date:</td><td style="padding: 8px;">${data.eventDate}</td></tr>
-          <tr><td style="padding: 8px; font-weight: bold;">Guest Count:</td><td style="padding: 8px;">${data.guestCount}</td></tr>
-        </table>
-        <p style="color: #888; font-size: 12px;">Submitted on ${new Date().toLocaleString()}</p>
-      `,
-    });
+      if (!response.ok) {
+        throw new Error(`Zapier webhook failed: ${response.status}`);
+      }
+    }
 
     return NextResponse.json({
       success: true,
@@ -90,7 +65,6 @@ export async function POST(request: Request) {
   }
 }
 
-// Handle other methods
 export async function GET() {
   return NextResponse.json(
     { error: "Method not allowed" },
