@@ -19,10 +19,19 @@ export const metadata: Metadata = {
   title: "BLOOM Mobile Bartending | San Antonio, Texas",
   description: "Premium mobile bartending services in San Antonio, Texas for weddings, corporate events, and private celebrations. Licensed, insured, and committed to crafting unforgettable experiences.",
   keywords: "mobile bartending, wedding bartender, corporate events, cocktail catering, private party bar, San Antonio, Texas",
+  metadataBase: new URL("https://www.bloombartending.com"),
   openGraph: {
     title: "BLOOM Mobile Bartending | San Antonio, Texas",
-    description: "Premium mobile bartending services for weddings, corporate events, and private celebrations.",
+    description: "Premium mobile bartending services for weddings, corporate events, and private celebrations. Licensed, insured, and committed to crafting unforgettable experiences.",
+    url: "https://www.bloombartending.com",
+    siteName: "BLOOM Mobile Bartending",
     type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BLOOM Mobile Bartending | San Antonio, Texas",
+    description: "Premium mobile bartending services for weddings, corporate events, and private celebrations.",
   },
 };
 
