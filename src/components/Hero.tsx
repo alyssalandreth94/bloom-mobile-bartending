@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="quote" className="relative min-h-screen pt-24 overflow-hidden">
+    <section id="quote" className="relative min-h-screen overflow-hidden" style={{ paddingTop: "calc(141px + 40px)" }}>
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush-light/30 to-champagne-light/50" />
       <ScatteredPetals />
