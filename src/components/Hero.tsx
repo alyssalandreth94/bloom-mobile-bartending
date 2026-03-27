@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="quote" className="relative min-h-screen pt-44 overflow-hidden">
+    <section id="quote" className="relative min-h-screen pt-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush-light/30 to-champagne-light/50" />
       <ScatteredPetals />
@@ -84,12 +84,6 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Copy */}
           <div className="text-center lg:text-left animate-fade-in">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-blush/20 mb-8">
-              <span className="w-2 h-2 bg-sage rounded-full animate-pulse" />
-              <span className="text-sm text-charcoal-light tracking-wide">Premium Mobile Bar Services</span>
-            </div>
-
             <h1
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-charcoal leading-tight mb-6"
               style={{ fontFamily: "var(--font-playfair), serif" }}
