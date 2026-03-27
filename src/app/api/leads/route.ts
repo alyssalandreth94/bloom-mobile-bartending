@@ -43,6 +43,22 @@ export async function POST(request: Request) {
       );
     }
 
+    // Send to Zapier webhook
+    if (process.env.ZAPIER_WEBHOOK_URL) {
+      await fetch(process.env.ZAPIER_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          eventDate: data.eventDate,
+          guestCount: data.guestCount,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+    }
+
     // Send email notification
     await transporter.sendMail({
       from: `"Bloom Bartending Website" <${process.env.EMAIL_USER}>`,
