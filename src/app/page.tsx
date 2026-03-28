@@ -11,7 +11,7 @@ import Image from "next/image";
 function FloralPageBreak() {
   return (
     <div
-      className="w-full h-[200px] bg-fixed bg-center bg-cover"
+      className="w-full h-dvh md:h-[200px] bg-scroll md:bg-fixed bg-center bg-cover"
       style={{ backgroundImage: "url(/wildflower-divider.png)" }}
       role="img"
       aria-label="Floral divider"
