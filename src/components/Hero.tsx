@@ -245,7 +245,7 @@ export default function Hero() {
                         <label htmlFor="eventDate" className="block text-sm font-medium text-charcoal mb-2">
                           Event Date
                         </label>
-                        <div className="relative">
+                        <div className="relative overflow-hidden">
                           <input
                             type="date"
                             id="eventDate"
@@ -253,7 +253,7 @@ export default function Hero() {
                             value={formData.eventDate}
                             onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
                             onBlur={() => markTouched("eventDate")}
-                            className={`w-full max-w-full box-border px-4 py-3 bg-white border-2 rounded-xl transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${formData.eventDate ? "text-charcoal" : "text-gray-400"} ${getFieldError("eventDate") ? "border-red-400" : "border-gray-200"}`}
+                            className={`w-full min-w-0 px-4 py-3 bg-white border-2 rounded-xl transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${formData.eventDate ? "text-charcoal" : "text-gray-400"} ${getFieldError("eventDate") ? "border-red-400" : "border-gray-200"}`}
                           />
                           {!formData.eventDate && (
                             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
