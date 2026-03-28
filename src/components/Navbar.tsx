@@ -120,7 +120,7 @@ export default function Navbar() {
       <div className="h-[80px]" />
 
       {/* Row 2: Navigation links — scrolls with page */}
-      <nav className="relative bg-cream">
+      <nav className="relative bg-white">
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blush/30 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex items-center justify-center gap-12 py-3">
