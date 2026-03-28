@@ -214,12 +214,16 @@ export default function Hero() {
                           Event Date
                         </label>
                         <input
-                          type="date"
+                          type="text"
+                          inputMode="none"
                           id="eventDate"
                           required
+                          placeholder="Select a date"
                           value={formData.eventDate}
+                          onFocus={(e) => { e.target.type = "date"; e.target.showPicker?.(); }}
+                          onBlur={(e) => { if (!e.target.value) e.target.type = "text"; }}
                           onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] appearance-none"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
                         />
                       </div>
                       <div>
