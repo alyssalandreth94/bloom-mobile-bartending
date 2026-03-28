@@ -7,8 +7,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header>
-      {/* Row 1: Logo + Location/Phone/Quote — scrolls away */}
+    <>
+      {/* Row 1: Logo + Location/Phone/Quote — scrolls with page */}
       <div className="bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2">
@@ -83,8 +83,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Row 2: Navigation links — sticky */}
-      <div className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10 border-t border-blush/20">
+      {/* Row 2: Navigation links — sticks to top when scrolled */}
+      <nav className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10 border-t border-blush/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex items-center justify-center gap-12 py-3">
             <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
@@ -134,7 +134,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </nav>
+    </>
   );
 }
