@@ -120,20 +120,20 @@ export default function Navbar() {
       <div className="h-[80px]" />
 
       {/* Row 2: Navigation links — scrolls with page */}
-      <nav className="relative bg-white">
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blush/30 to-transparent" />
+      <nav className="relative bg-[#8E9FCA]">
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex items-center justify-center gap-12 py-3">
-            <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+            <a href="#services" className="text-white hover:text-white/70 transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
               Services
             </a>
-            <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+            <a href="#gallery" className="text-white hover:text-white/70 transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
               Gallery
             </a>
-            <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+            <a href="#testimonials" className="text-white hover:text-white/70 transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
               Reviews
             </a>
-            <a href="#quote" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+            <a href="#quote" className="text-white hover:text-white/70 transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
               Contact
             </a>
           </div>
