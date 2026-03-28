@@ -83,7 +83,7 @@ export default function CocktailGallery() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-sage-light/50 text-sage-dark text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-sage/30 text-charcoal-light text-sm font-medium rounded-full mb-4">
             Signature Creations
           </span>
           <h2
