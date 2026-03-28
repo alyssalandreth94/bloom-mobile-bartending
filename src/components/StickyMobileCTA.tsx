@@ -28,7 +28,7 @@ export default function StickyMobileCTA() {
       <div className="absolute inset-0 bg-gradient-to-t from-white via-white to-transparent h-24 -top-8" />
 
       {/* CTA Container */}
-      <div className="relative bg-white/95 backdrop-blur-lg border-t border-blush/20 px-4 py-4 shadow-lg shadow-charcoal/10">
+      <div className="relative bg-white/95 backdrop-blur-lg border-t border-blush/20 px-4 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))] shadow-lg shadow-charcoal/10">
         <div className="flex items-center gap-3">
           {/* Phone Button */}
           <a

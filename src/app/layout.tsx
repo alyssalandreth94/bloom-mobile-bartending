@@ -15,6 +15,10 @@ const lato = Lato({
   display: "swap",
 });
 
+export const viewport = {
+  viewportFit: "cover" as const,
+};
+
 export const metadata: Metadata = {
   title: "BLOOM Mobile Bartending | San Antonio, Texas",
   description: "Premium mobile bartending services in San Antonio, Texas for weddings, corporate events, and private celebrations. Licensed, insured, and committed to crafting unforgettable experiences.",
