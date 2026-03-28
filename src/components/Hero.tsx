@@ -127,11 +127,11 @@ export default function Hero() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-8 border-t border-blush/20 max-w-xs mx-auto lg:mx-0">
-              <div className="text-center lg:text-left">
+              <div className="text-center">
                 <div className="text-3xl font-bold text-charcoal" style={{ fontFamily: "var(--font-playfair), serif" }}>5.0</div>
                 <div className="text-sm text-neutral-gray">Star Rating</div>
               </div>
-              <div className="text-center lg:text-left">
+              <div className="text-center">
                 <div className="text-3xl font-bold text-charcoal" style={{ fontFamily: "var(--font-playfair), serif" }}>100%</div>
                 <div className="text-sm text-neutral-gray">Satisfaction</div>
               </div>
