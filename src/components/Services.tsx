@@ -115,12 +115,12 @@ export default function Services() {
                 className={`group relative p-8 rounded-3xl ${colors.bg} border ${colors.border} transition-all duration-500 hover:shadow-2xl hover:shadow-blush/10 hover:-translate-y-1`}
               >
                 {/* Icon + Title */}
-                <div className="flex items-center gap-4 mb-4 md:block">
-                  <div className={`w-16 h-16 flex-shrink-0 rounded-2xl ${colors.bg} flex items-center justify-center ${colors.text} transition-transform duration-300 group-hover:scale-110 md:mb-6`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`w-16 h-16 flex-shrink-0 rounded-2xl ${colors.bg} flex items-center justify-center ${colors.text} transition-transform duration-300 group-hover:scale-110`}>
                     {service.icon}
                   </div>
                   <h3
-                    className="text-2xl text-charcoal md:mb-0"
+                    className="text-2xl text-charcoal"
                     style={{ fontFamily: "var(--font-playfair), serif" }}
                   >
                     {service.title}
