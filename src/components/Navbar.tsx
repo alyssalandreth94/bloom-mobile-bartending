@@ -117,7 +117,7 @@ export default function Navbar() {
       </div>
 
       {/* Spacer for fixed navbar */}
-      <div className="h-[96px]" />
+      <div className="h-[80px]" />
 
       {/* Row 2: Navigation links — scrolls with page */}
       <nav className="bg-cream/95 backdrop-blur-md shadow-sm border-t border-blush/20">
