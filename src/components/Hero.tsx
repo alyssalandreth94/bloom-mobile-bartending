@@ -80,7 +80,7 @@ export default function Hero() {
         </div>
       ))}
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 md:pt-10 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Copy */}
           <div className="text-center lg:text-left animate-fade-in">
@@ -219,7 +219,7 @@ export default function Hero() {
                           required
                           value={formData.eventDate}
                           onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                          className="w-full px-4 py-3 bg-cream/50 border border-blush/20 rounded-xl text-charcoal transition-all duration-300 hover:border-blush/40 focus:border-blush focus:bg-white"
+                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] appearance-none"
                         />
                       </div>
                       <div>
