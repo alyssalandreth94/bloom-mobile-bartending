@@ -22,9 +22,35 @@ export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
+  const markTouched = (field: string) => {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+  };
+
+  const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const getFieldError = (field: keyof FormData) => {
+    if (!touched[field]) return "";
+    if (!formData[field]) return "Required";
+    if (field === "email" && !isValidEmail(formData.email)) return "Invalid email";
+    return "";
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    // Mark all fields as touched
+    const allTouched: Record<string, boolean> = {};
+    for (const key of Object.keys(formData)) allTouched[key] = true;
+    setTouched(allTouched);
+
+    // Validate
+    const missing = Object.entries(formData).some(([, v]) => !v);
+    if (missing || !isValidEmail(formData.email)) {
+      setError("Please fill in all fields correctly.");
+      return;
+    }
+
     setIsSubmitting(true);
     setError("");
 
@@ -172,9 +198,11 @@ export default function Hero() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
+                        onBlur={() => markTouched("name")}
+                        className={`w-full px-4 py-3 bg-white border-2 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${getFieldError("name") ? "border-red-400" : "border-gray-200"}`}
                         placeholder="Jane Smith"
                       />
+                      {getFieldError("name") && <p className="text-red-500 text-xs mt-1">{getFieldError("name")}</p>}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -188,9 +216,11 @@ export default function Hero() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
+                          onBlur={() => markTouched("email")}
+                          className={`w-full px-4 py-3 bg-white border-2 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${getFieldError("email") ? "border-red-400" : "border-gray-200"}`}
                           placeholder="jane@email.com"
                         />
+                        {getFieldError("email") && <p className="text-red-500 text-xs mt-1">{getFieldError("email")}</p>}
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
@@ -202,9 +232,11 @@ export default function Hero() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
+                          onBlur={() => markTouched("phone")}
+                          className={`w-full px-4 py-3 bg-white border-2 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${getFieldError("phone") ? "border-red-400" : "border-gray-200"}`}
                           placeholder="(555) 000-0000"
                         />
+                        {getFieldError("phone") && <p className="text-red-500 text-xs mt-1">{getFieldError("phone")}</p>}
                       </div>
                     </div>
 
@@ -220,7 +252,8 @@ export default function Hero() {
                             required
                             value={formData.eventDate}
                             onChange={(e) => setFormData({ ...formData, eventDate: e.target.value })}
-                            className={`w-full max-w-full box-border px-4 py-3 bg-white border-2 border-gray-200 rounded-xl transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${formData.eventDate ? "text-charcoal" : "text-gray-400"}`}
+                            onBlur={() => markTouched("eventDate")}
+                            className={`w-full max-w-full box-border px-4 py-3 bg-white border-2 rounded-xl transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${formData.eventDate ? "text-charcoal" : "text-gray-400"} ${getFieldError("eventDate") ? "border-red-400" : "border-gray-200"}`}
                           />
                           {!formData.eventDate && (
                             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
@@ -228,6 +261,7 @@ export default function Hero() {
                             </span>
                           )}
                         </div>
+                        {getFieldError("eventDate") && <p className="text-red-500 text-xs mt-1">{getFieldError("eventDate")}</p>}
                       </div>
                       <div>
                         <label htmlFor="guestCount" className="block text-sm font-medium text-charcoal mb-2">
@@ -240,9 +274,11 @@ export default function Hero() {
                           min="1"
                           value={formData.guestCount}
                           onChange={(e) => setFormData({ ...formData, guestCount: e.target.value })}
-                          className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0]"
+                          onBlur={() => markTouched("guestCount")}
+                          className={`w-full px-4 py-3 bg-white border-2 rounded-xl text-charcoal placeholder-gray-400 transition-all duration-300 hover:border-[#8E9FCA] focus:border-[#6B7EB0] focus:ring-2 focus:ring-[#E0E4F0] ${getFieldError("guestCount") ? "border-red-400" : "border-gray-200"}`}
                           placeholder="50"
                         />
+                        {getFieldError("guestCount") && <p className="text-red-500 text-xs mt-1">{getFieldError("guestCount")}</p>}
                       </div>
                     </div>
 
