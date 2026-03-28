@@ -143,16 +143,7 @@ export default function Testimonials() {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-16 grid grid-cols-3 gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl border border-white/50">
-          <div className="text-center">
-            <div
-              className="text-3xl md:text-4xl text-charcoal mb-1"
-              style={{ fontFamily: "var(--font-playfair), serif" }}
-            >
-              1000+
-            </div>
-            <div className="text-sm text-neutral-gray">Cocktails Crafted</div>
-          </div>
+        <div className="mt-16 grid grid-cols-2 gap-8 p-8 bg-white/40 backdrop-blur-sm rounded-2xl border border-white/50 max-w-md mx-auto">
           <div className="text-center">
             <div
               className="text-3xl md:text-4xl text-charcoal mb-1"
@@ -167,9 +158,9 @@ export default function Testimonials() {
               className="text-3xl md:text-4xl text-charcoal mb-1"
               style={{ fontFamily: "var(--font-playfair), serif" }}
             >
-              8+
+              100%
             </div>
-            <div className="text-sm text-neutral-gray">Years Experience</div>
+            <div className="text-sm text-neutral-gray">Satisfaction</div>
           </div>
         </div>
       </div>
