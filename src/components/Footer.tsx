@@ -128,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@bloombartending.com"
+                  href="mailto:alyssa@bloombartending.com"
                   className="flex items-center gap-3 text-white/70 hover:text-peach transition-colors duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-peach/20 transition-colors duration-300">
@@ -141,7 +141,7 @@ export default function Footer() {
                       />
                     </svg>
                   </div>
-                  <span>hello@bloombartending.com</span>
+                  <span>alyssa@bloombartending.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
