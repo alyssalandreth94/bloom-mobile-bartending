@@ -107,7 +107,7 @@ export default function Hero() {
       ))}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 md:pt-10 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-16 items-center">
           {/* Left Column - Copy */}
           <div className="text-center lg:text-left animate-fade-in">
             <h1
