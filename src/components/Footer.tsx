@@ -36,17 +36,23 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center mb-6 group">
+            <a href="#" className="flex items-center gap-4 mb-6 group">
               <Image
                 src="/bloom-icon.png"
                 alt="Bloom Mobile Bartending"
                 width={360}
                 height={180}
-                className="h-36 w-auto brightness-0 invert opacity-90 transition-transform duration-300 group-hover:scale-105"
+                className="h-24 w-auto brightness-0 invert opacity-90 transition-transform duration-300 group-hover:scale-105"
               />
+              <span
+                className="text-xl lg:text-2xl text-white/90 tracking-wide whitespace-nowrap"
+                style={{ fontFamily: "var(--font-playfair), serif" }}
+              >
+                BLOOM <span className="text-blush-light">Mobile Bartending</span>
+              </span>
             </a>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
-              Premium mobile bartending services for life's most memorable moments.
+              Premium mobile bartending services for life&apos;s most memorable moments.
               Crafting exceptional experiences, one cocktail at a time.
             </p>
 

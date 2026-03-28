@@ -71,7 +71,7 @@ export default function CocktailGallery() {
   }, [isAutoPlaying, nextSlide]);
 
   return (
-    <section id="gallery" className="py-24 bg-white relative overflow-hidden">
+    <section id="gallery" className="py-10 bg-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-champagne/10 rounded-full blur-3xl" />

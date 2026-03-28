@@ -50,7 +50,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="testimonials" className="py-24 bg-gradient-to-b from-cream to-blush-light/30 relative overflow-hidden">
+    <section id="testimonials" className="py-10 bg-gradient-to-b from-cream to-blush-light/30 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-sage/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-champagne/10 rounded-full blur-3xl" />

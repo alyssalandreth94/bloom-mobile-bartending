@@ -55,7 +55,7 @@ export default function TrustSignals() {
   ];
 
   return (
-    <section className="relative py-12 bg-white border-y border-blush/10">
+    <section className="relative py-10 bg-white border-y border-blush/10">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-blush-light/20 via-transparent to-sage-light/20" />
 

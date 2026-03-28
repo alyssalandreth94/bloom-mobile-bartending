@@ -79,7 +79,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-cream relative overflow-hidden">
+    <section id="services" className="py-10 bg-cream relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blush/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-sage/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
