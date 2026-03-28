@@ -248,7 +248,7 @@ export default function Hero() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-[#819B8A] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-[#819B8A]/50 hover:shadow-xl hover:shadow-[#6E8876]/50 hover:bg-[#6E8876] hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
+                      className="w-full py-4 bg-[#819B8A] text-white font-semibold rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:shadow-none"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center gap-2">

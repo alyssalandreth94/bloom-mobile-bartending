@@ -177,7 +177,7 @@ export default function Services() {
         <div className="text-center mt-16">
           <a
             href="#quote"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#819B8A] text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-[#819B8A]/30 hover:shadow-xl hover:shadow-[#6E8876]/40 hover:scale-105 hover:bg-[#6E8876]"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#819B8A] text-white font-semibold rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:scale-105 hover:bg-[#6E8876]"
           >
             <span>Get Your Free Quote</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

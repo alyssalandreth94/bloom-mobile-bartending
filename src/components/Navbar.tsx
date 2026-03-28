@@ -11,7 +11,7 @@ export default function Navbar() {
       {/* Row 1: Logo + Location/Phone/Quote — fixed at top */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-2">
+          <div className="flex items-center justify-between py-0">
             {/* Logo Image + Brand Name */}
             <a href="#" className="flex items-center gap-4 group">
               <Image
@@ -58,7 +58,7 @@ export default function Navbar() {
               {/* CTA Button */}
               <a
                 href="#quote"
-                className="relative px-8 py-3 bg-[#819B8A] text-white text-base font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-md shadow-[#819B8A]/50 hover:shadow-xl hover:shadow-[#6E8876]/40 hover:bg-[#6E8876] hover:scale-105"
+                className="relative px-8 py-3 bg-[#819B8A] text-white text-base font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] hover:scale-105"
               >
                 <span className="relative z-10">Get a Quote</span>
                 <div className="absolute inset-0 bg-[#6E8876] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
