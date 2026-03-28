@@ -58,10 +58,9 @@ export default function Navbar() {
               {/* CTA Button */}
               <a
                 href="#quote"
-                className="relative px-8 py-3 bg-[#819B8A] text-white text-base font-semibold tracking-wide rounded-full overflow-hidden group transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] hover:scale-105"
+                className="px-8 py-3 bg-[#819B8A] text-white text-base font-semibold tracking-wide rounded-xl transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] hover:scale-105"
               >
-                <span className="relative z-10">Get a Quote</span>
-                <div className="absolute inset-0 bg-[#6E8876] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                Get a Quote
               </a>
             </div>
 
