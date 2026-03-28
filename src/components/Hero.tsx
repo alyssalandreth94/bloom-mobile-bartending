@@ -63,7 +63,7 @@ export default function Hero() {
 
       if (!response.ok) throw new Error("Failed to submit");
 
-      setIsSubmitted(true);
+      window.location.href = "/thank-you";
     } catch {
       setError("Something went wrong. Please try again or call us directly.");
     } finally {
