@@ -46,7 +46,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="quote" className="relative min-h-screen pt-10 overflow-hidden">
+    <section id="quote" className="relative min-h-screen overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush-light/30 to-champagne-light/50" />
       <ScatteredPetals />
@@ -80,7 +80,7 @@ export default function Hero() {
         </div>
       ))}
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Copy */}
           <div className="text-center lg:text-left animate-fade-in">
