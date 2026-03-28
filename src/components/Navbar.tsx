@@ -23,7 +23,7 @@ export default function Navbar() {
                 priority
               />
               <h1
-                className="text-xl sm:text-2xl lg:text-3xl text-charcoal tracking-wide whitespace-nowrap"
+                className="text-lg sm:text-xl lg:text-2xl text-charcoal tracking-wide whitespace-nowrap"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 BLOOM{" "}
