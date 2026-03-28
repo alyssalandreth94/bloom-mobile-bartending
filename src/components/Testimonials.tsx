@@ -68,7 +68,7 @@ export default function Testimonials() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 bg-gray-200 text-charcoal text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-[#8E9FCA] text-white text-sm font-medium rounded-full mb-4">
             Client Love
           </span>
           <h2
