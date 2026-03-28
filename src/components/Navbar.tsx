@@ -8,8 +8,8 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Row 1: Logo + Location/Phone/Quote — scrolls with page */}
-      <div className="bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10">
+      {/* Row 1: Logo + Location/Phone/Quote — fixed at top */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-2">
             {/* Logo Image + Brand Name */}
@@ -80,26 +80,6 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* Row 2: Navigation links — sticks to top when scrolled */}
-      <nav className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10 border-t border-blush/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hidden md:flex items-center justify-center gap-12 py-3">
-            <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
-              Services
-            </a>
-            <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
-              Gallery
-            </a>
-            <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
-              Reviews
-            </a>
-            <a href="#quote" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
-              Contact
-            </a>
-          </div>
 
           {/* Mobile Menu */}
           <div
@@ -107,7 +87,7 @@ export default function Navbar() {
               isMobileMenuOpen ? "max-h-64 pb-6" : "max-h-0"
             }`}
           >
-            <div className="flex flex-col gap-4 pt-4">
+            <div className="flex flex-col gap-4 pt-4 border-t border-blush/20">
               <a href="#services" className="text-charcoal-light hover:text-peach transition-colors">
                 Services
               </a>
@@ -132,6 +112,29 @@ export default function Navbar() {
                 (818) 384-9862
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Spacer for fixed navbar */}
+      <div className="h-[96px]" />
+
+      {/* Row 2: Navigation links — scrolls with page */}
+      <nav className="bg-cream/95 backdrop-blur-md shadow-sm border-t border-blush/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="hidden md:flex items-center justify-center gap-12 py-3">
+            <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+              Services
+            </a>
+            <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+              Gallery
+            </a>
+            <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+              Reviews
+            </a>
+            <a href="#quote" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
+              Contact
+            </a>
           </div>
         </div>
       </nav>
