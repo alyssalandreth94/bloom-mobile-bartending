@@ -120,7 +120,7 @@ export default function Navbar() {
       <div className="h-[80px]" />
 
       {/* Row 2: Navigation links — scrolls with page */}
-      <nav className="bg-cream/95 backdrop-blur-md shadow-sm border-t border-blush/20">
+      <nav className="bg-cream/95 backdrop-blur-md shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex items-center justify-center gap-12 py-3">
             <a href="#services" className="text-charcoal-light hover:text-peach transition-colors duration-300 text-sm font-medium tracking-wider uppercase">
