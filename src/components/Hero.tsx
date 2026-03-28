@@ -177,7 +177,7 @@ export default function Hero() {
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
                           Email
@@ -208,7 +208,7 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="eventDate" className="block text-sm font-medium text-charcoal mb-2">
                           Event Date
