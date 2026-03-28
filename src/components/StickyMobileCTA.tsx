@@ -7,8 +7,11 @@ export default function StickyMobileCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling past the hero section (roughly 600px)
-      setIsVisible(window.scrollY > 600);
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        const rect = servicesSection.getBoundingClientRect();
+        setIsVisible(rect.top <= window.innerHeight);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,7 +33,7 @@ export default function StickyMobileCTA() {
           {/* Phone Button */}
           <a
             href="tel:+18183849862"
-            className="flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500 text-white transition-all duration-300 shadow-md shadow-emerald-300/50 hover:bg-emerald-600 hover:shadow-lg active:scale-95"
+            className="flex items-center justify-center w-14 h-14 rounded-full bg-[#819B8A] text-white transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] active:scale-95"
             aria-label="Call us"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +49,7 @@ export default function StickyMobileCTA() {
           {/* Quote Button */}
           <a
             href="#quote"
-            className="flex-1 flex items-center justify-center gap-2 h-14 bg-[#819B8A] text-white font-semibold rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] active:scale-[0.98]"
+            className="flex-1 flex items-center justify-center gap-2 h-14 bg-[#819B8A] text-white font-semibold rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-[#6E8876]/20 hover:bg-[#6E8876] active:scale-[0.98]"
           >
             <span>Get Your Free Quote</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
