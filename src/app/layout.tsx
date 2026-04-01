@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -17,6 +18,7 @@ const lato = Lato({
 
 export const viewport = {
   viewportFit: "cover" as const,
+  interactiveWidget: "resizes-content" as const,
 };
 
 export const metadata: Metadata = {
@@ -46,6 +48,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XGE1MTC98S"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XGE1MTC98S');
+          `}
+        </Script>
+      </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
         style={{ fontFamily: "var(--font-lato), sans-serif" }}

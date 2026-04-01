@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <>
       {/* Row 1: Logo + Location/Phone/Quote — fixed at top */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-md shadow-lg shadow-blush/10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-lg shadow-blush/10 will-change-transform">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-0">
             {/* Logo Image + Brand Name */}
@@ -19,7 +19,7 @@ export default function Navbar() {
                 alt="Bloom Mobile Bartending"
                 width={360}
                 height={180}
-                className="h-20 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+                className="h-14 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105 my-2"
                 priority
               />
               <h1
@@ -87,13 +87,13 @@ export default function Navbar() {
             }`}
           >
             <div className="flex flex-col gap-4 pt-4 border-t border-blush/20">
-              <a href="#services" className="text-charcoal-light hover:text-peach transition-colors">
+              <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="text-charcoal-light hover:text-peach transition-colors">
                 Services
               </a>
-              <a href="#gallery" className="text-charcoal-light hover:text-peach transition-colors">
+              <a href="#gallery" onClick={() => setIsMobileMenuOpen(false)} className="text-charcoal-light hover:text-peach transition-colors">
                 Gallery
               </a>
-              <a href="#testimonials" className="text-charcoal-light hover:text-peach transition-colors">
+              <a href="#testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-charcoal-light hover:text-peach transition-colors">
                 Reviews
               </a>
               <a
@@ -116,7 +116,7 @@ export default function Navbar() {
       </div>
 
       {/* Spacer for fixed navbar */}
-      <div className="h-[84px]" />
+      <div className="h-[72px]" />
 
       {/* Row 2: Navigation links — scrolls with page */}
       <nav className="relative bg-[#8E9FCA]">
