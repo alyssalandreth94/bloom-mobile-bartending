@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-0">
             {/* Logo Image + Brand Name */}
-            <a href="#" className="flex items-center gap-4 group">
+            <a href="/" className="flex items-center gap-4 group">
               <Image
                 src="/bloom-icon.png"
                 alt="Bloom Mobile Bartending"
@@ -22,13 +22,13 @@ export default function Navbar() {
                 className="h-14 w-auto flex-shrink-0 transition-transform duration-300 group-hover:scale-105 my-2"
                 priority
               />
-              <h1
+              <span
                 className="text-lg sm:text-xl lg:text-2xl text-charcoal tracking-wide whitespace-nowrap"
                 style={{ fontFamily: "var(--font-playfair), serif" }}
               >
                 BLOOM{" "}
                 <span className="text-blush-dark">Mobile Bartending</span>
-              </h1>
+              </span>
             </a>
 
             {/* Location, Phone, CTA */}
